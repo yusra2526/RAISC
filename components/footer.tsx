@@ -140,13 +140,17 @@ export default function Footer() {
           className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
           <p>&copy; {new Date().getFullYear()} RAISC. All rights reserved.</p>
-          <p className="mt-4 md:mt-0 flex items-center">
-            Made with{" "}
-            <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2 }}>
-              <Heart className="h-4 w-4 text-red-400 mx-1" />
-            </motion.div>{" "}
-            for better mental health
-          </p>
+          <div className="mt-4 md:mt-0 flex items-center">
+            <span>Made with</span>
+            <motion.span
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ repeat: Infinity, duration: 2 }}
+              className="mx-1"
+            >
+              <Heart className="h-4 w-4 text-red-400" />
+            </motion.span>
+            <span>for better mental health</span>
+          </div>
         </motion.div>
       </div>
     </footer>
